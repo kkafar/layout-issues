@@ -45,7 +45,8 @@
     },
     "ios": {
       "componentProvider": {
-        "NativeView": "NativeViewComponentView"
+        "NativeView": "NativeViewComponentView",
+        "SheetView": "SheetViewComponentView"
       }
     }
   }
