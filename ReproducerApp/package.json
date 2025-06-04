@@ -35,5 +35,18 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "codegenConfig": {
+    "name": "appcomponents",
+    "type": "all",
+    "jsSrcsDir": "./components/spec",
+    "android": {
+      "javaPackageName": "com.swmansion.rnscreens"
+    },
+    "ios": {
+      "componentProvider": {
+        "NativeView": "NativeViewComponentView"
+      }
+    }
   }
 }
