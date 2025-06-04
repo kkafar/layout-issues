@@ -1,7 +1,6 @@
 import React from 'react';
 import {StyleSheet, type ViewProps} from 'react-native';
 import {View} from 'react-native';
-import LayoutAdjustmentContext from '../contexts/LayoutAdjustmentContext';
 
 export type ContentViewProps = ViewProps;
 
@@ -18,17 +17,15 @@ function Rect(props: {size: number}) {
 }
 
 export function ContentView(props: ContentViewProps) {
-  const {insetTop} = React.useContext(LayoutAdjustmentContext);
-
   return (
     <View
+      collapsable={false}
       {...props}
       style={[
         props.style,
         styles.container,
         styles.centered,
         {backgroundColor: 'lightblue'},
-        {marginTop: insetTop},
       ]}>
       <Rect size={128} />
     </View>
